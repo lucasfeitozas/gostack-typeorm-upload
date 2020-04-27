@@ -19,9 +19,10 @@ transactionsRouter.get('/', async (request, response) => {
   const transactionsResult = transactions.map(transaction => {
     const result = {
       id: transaction.id,
-      title: transaction.type,
+      title: transaction.title,
       value: transaction.value,
       type: transaction.type,
+      created_at: transaction.created_at,
       category: {
         id: transaction.category_id,
         title: transaction.category.title,
